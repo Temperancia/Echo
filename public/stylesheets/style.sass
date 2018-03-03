@@ -1,0 +1,184 @@
+$blue-first: #03b0f5
+$blue-second: #0669b2
+$blue-third: #044476
+$blue-fourth: #0a7584
+$blue-fifth: #1e3d56
+$white: #ece7e7
+$height-header: 60px
+$border-radius: 5px
+a
+  color: white
+img
+  width: 100%
+
+.md-button
+  outline: solid 1px black
+  background-color: $white
+  color: black
+  border-radius: $border-radius
+  text-transform: none
+html
+  body
+    position: relative
+    color: black !important
+    font-family: 'Roboto', sans-serif !important
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: $white
+      content: ''
+      opacity: 0.6
+    header
+      position: fixed
+      top: 0
+      width: 100%
+      height: $height-header
+      background-color: $blue-third
+      z-index: 1
+      .logo
+        position: absolute
+        top: 0
+        left: 5%
+        z-index: 1
+        img
+          width: auto
+          height: $height-header + 15px
+      ul
+        display: flex
+        height: $height-header
+        align-items: center
+        justify-content: center
+        margin: 0
+        li
+          padding: 10px 30px
+          list-style: none
+      .md-button
+        border-radius: 10px !important
+        outline: none
+    footer
+      position: fixed
+      bottom: 0
+      display: flex
+      width: 100%
+      align-items: center
+      justify-content: center
+      z-index: 1
+      &::before
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: $blue-third
+        content: ''
+      ul
+        margin: 0
+        li
+          padding: 10px 30px
+          list-style: none
+    .content
+      padding-top: $height-header
+      .background
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+        background: url('/../images/background.jpg') no-repeat no-repeat
+        opacity: 0.7
+      // home
+      .home
+        .title-location
+          //box-shadow: 0 0 3pt 2pt black
+          //outline: solid 1px black
+          background-color: $white
+          color: black
+
+
+        //background: $blue-third
+        .profile
+          background-color: #46abb9
+
+          //background: linear-gradient(to bottom, $blue-second 0%, $blue-third 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          ul
+            li
+              list-style: none
+              .md-button
+                width: 100%
+                margin: 0
+                img
+                  float: left
+        .wall
+          background-color: #46abb9
+          //background: linear-gradient(to bottom, $blue-second 0%, $blue-third 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        .border
+          border-right: 1px solid white
+      // public
+      .inscription
+        h5
+          position: relative
+          display: inline-block
+          z-index: 0
+          &::before
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            border-top-left-radius: 20px
+            border-top-right-radius: 20px
+            background-color: $blue-third
+            content: ''
+            opacity: 0.5
+            z-index: -1
+        form
+          position: relative
+          padding: 15px
+          &::before
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            border-radius: 20px
+            background: $blue-first /* Old browsers */
+            background: -moz-linear-gradient(top, $blue-first 0%, $blue-third 100%) /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, $blue-first 0%, $blue-third 100%) /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, $blue-third 0%, $blue-second 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$blue-first, endColorstr=$blue-third,GradientType=0) /* IE6-9 */
+            opacity: 0.5
+            content: ''
+          md-checkbox.md-checked .md-icon
+            background: blue
+          md-input-container
+            input
+              border-color: grey
+            label
+              color: white !important
+              font-family: 'Roboto', sans-serif !important
+          .hyperlink
+            color: $blue-first
+            text-decoration: underline
+          .connexion
+            width: 100px
+            height: 50px
+            padding: 5px 10px
+            border-radius: 30px
+            background-color: $blue-fourth
+          .inscription
+            width: 100px
+            height: 50px
+            padding: 5px 10px
+            border-radius: 30px
+            margin: 10px 20px
+            background-color: $blue-fourth
+      // streams-search
+      .streams-search
+        span
+          color: black
+        .search-col
+          border-right: solid black 1px
+        md-select
+          margin-top: 10px

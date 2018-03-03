@@ -1,0 +1,67 @@
+.background
+.container.inscription(ng-controller='InscriptionController')
+    .row
+        .col-8.text-center
+            h3.mt-5.mb-5 Bienvenue sur Echo.
+            p
+                em Partagez ce qui vous tracasse - Connectez-vous
+            p
+                em Satisfaisez votre curiosité - Sachez-en plus sur votre entourage et plus encore !
+        .col-4
+            h5.p-2.mt-3.mb-0.ml-3 Déjà membre ?
+            form.mb-3(role='form', name='loginForm', spellcheck='false', ng-submit='login()')
+                md-input-container.md-block(flex-gt-sm)
+                    label Numéro de mobile ou Email
+                    input(required, name='name', ng-model='user.name')
+                    div(ng-messages='loginForm.name.$error')
+                        div(ng-message='required') t'es qui ?
+                md-input-container.md-block(flex-gt-sm)
+                    label Mot de passe
+                    input(type='password', required, name='password', ng-model='user.password')
+                    div(ng-messages='loginForm.password.$error')
+                        div(ng-message='required') mdp fdp
+                        div(ng-if='unknown') t'existes pas ou tu sais pas ton mdp noob
+                md-button.hyperlink(ng-click='forgottenPassword($event)')
+                    | Mot de passe oublié ?
+                md-button.connexion.ml-4(type='submit')
+                    | Se connecter
+    h5.p-2.mb-0.ml-3 Nouveau ? Créer un compte (c'est gratuit)
+    form(role='form', name='registerForm', autocomplete='off', spellcheck='false', ng-submit='register()')
+        .row
+            .col-2
+                label Vous voulez être :
+                md-radio-group(name='new_population', ng-model='new_user.population')
+                    md-radio-button(value='public', aria-label='public')
+                        | Public
+                    md-radio-button(value='anonymous', aria-label='anonyme')
+                        | Anonyme
+                div(ng-messages='registerForm.new_population.$error')
+                    div(style='color: #dd2c00', ng-if='errorPopulation') pick retard
+            .col-3
+                md-input-container.md-block(flex-gt-sm)
+                    label Pseudo
+                    input(required, name='new_name', ng-model='new_user.name')
+                    div(ng-messages='registerForm.new_name.$error')
+                        div(ng-message='required') name ?
+                md-input-container.md-block(flex-gt-sm)
+                    label Email ou Numéro de tél
+                    input(type='email', required, name='new_user_email', ng-model='new_user.email')
+                    div(ng-messages='registerForm.new_user_email.$error')
+                        div(ng-message='required') email ?
+                        div(ng-message='email') invalid ?
+            .col-3
+                md-input-container.md-block(flex-gt-sm)
+                    label Mot de passe
+                    input(type='password', required, name='new_password', ng-model='new_user.password')
+                    div(ng-messages='registerForm.new_password.$error')
+                        div(ng-message='required') password ?
+                md-input-container.md-block(flex-gt-sm)
+                    label Confirmer le mot de passe
+                    input(type='password', required, name='new_confirm', match-password='new_password' ng-model='user.confirm_password')
+                    div(ng-messages='registerForm.new_confirm.$error', ng-messages-multiple='ng-messages-multiple')
+                        div(ng-message='required') confirm ?
+                        div(ng-message='passwordMatch') autist ?
+            .col-4.text-center
+                p
+                    em En vous inscrivant, vous acceptez nos Conditions et indiquez être informé de la Politique d'utilisation
+                md-button.inscription(type='submit') S'inscrire

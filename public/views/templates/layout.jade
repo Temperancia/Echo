@@ -1,0 +1,26 @@
+doctype html
+html(lang='fr', ng-app='Echo')
+    head
+        base(href='/')
+        title Echo
+        link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/angular-material.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto')
+        script(src='/javascripts/angular.min.js')
+        script(src='/javascripts/angular-ui-router.min.js')
+        script(src='/javascripts/angular-cookies.min.js')
+        script(src='/javascripts/angular-animate.min.js')
+        script(src='/javascripts/angular-aria.min.js')
+        script(src='/javascripts/angular-messages.min.js')
+        script(src='/javascripts/angular-material.min.js')
+        script(src='/javascripts/angular-material-icons.min.js')
+        script(src='/javascripts/angular-password.min.js')
+        script(src='/javascripts/echo-angular.js')
+    body
+        header
+            include header
+        .content
+            div(ui-view)
+        footer
+            include footer

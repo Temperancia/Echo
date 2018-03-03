@@ -1,0 +1,17 @@
+.row
+    .col-11
+        nav(role='navigation')
+            ul.row
+                li
+                    a(href='') Profil
+                li
+                    a(href='', ui-sref="streams", ui-sref-active="active") Rejoindre un flux
+                li
+                    a(href='') Centre d'aide
+    .col-1
+        md-menu(ng-controller='MenuController')
+            md-button(aria-label="Open phone interactions menu", class="md-icon-button", ng-click="openMenu($mdMenu, $event)")
+
+            md-menu-content(width="2")
+                div
+                    md-button(ng-click='logout()') log out

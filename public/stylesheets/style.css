@@ -1,0 +1,163 @@
+a {
+  color: white; }
+
+img {
+  width: 100%; }
+
+.md-button {
+  outline: solid 1px black;
+  background-color: #ece7e7;
+  color: black;
+  border-radius: 5px;
+  text-transform: none; }
+
+html body {
+  position: relative;
+  color: black !important;
+  font-family: "Roboto", sans-serif !important; }
+  html body::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ece7e7;
+    content: "";
+    opacity: 0.6; }
+  html body header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #044476;
+    z-index: 1; }
+    html body header .logo {
+      position: absolute;
+      top: 0;
+      left: 5%;
+      z-index: 1; }
+      html body header .logo img {
+        width: auto;
+        height: 75px; }
+    html body header ul {
+      display: flex;
+      height: 60px;
+      align-items: center;
+      justify-content: center;
+      margin: 0; }
+      html body header ul li {
+        padding: 10px 30px;
+        list-style: none; }
+    html body header .md-button {
+      border-radius: 10px !important;
+      outline: none; }
+  html body footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; }
+    html body footer::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #044476;
+      content: ""; }
+    html body footer ul {
+      margin: 0; }
+      html body footer ul li {
+        padding: 10px 30px;
+        list-style: none; }
+  html body .content {
+    padding-top: 60px; }
+    html body .content .background {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url("/../images/background.jpg") no-repeat no-repeat;
+      opacity: 0.7; }
+    html body .content .home .title-location {
+      background-color: #ece7e7;
+      color: black; }
+    html body .content .home .profile {
+      background-color: #46abb9; }
+      html body .content .home .profile ul li {
+        list-style: none; }
+        html body .content .home .profile ul li .md-button {
+          width: 100%;
+          margin: 0; }
+          html body .content .home .profile ul li .md-button img {
+            float: left; }
+    html body .content .home .wall {
+      background-color: #46abb9; }
+    html body .content .home .border {
+      border-right: 1px solid white; }
+    html body .content .inscription h5 {
+      position: relative;
+      display: inline-block;
+      z-index: 0; }
+      html body .content .inscription h5::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #044476;
+        content: "";
+        opacity: 0.5;
+        z-index: -1; }
+    html body .content .inscription form {
+      position: relative;
+      padding: 15px; }
+      html body .content .inscription form::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background: #03b0f5;
+        background: -moz-linear-gradient(top, #03b0f5 0%, #044476 100%);
+        background: -webkit-linear-gradient(top, #03b0f5 0%, #044476 100%);
+        background: linear-gradient(to bottom, #044476 0%, #0669b2 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$blue-first, endColorstr=$blue-third,GradientType=0);
+        opacity: 0.5;
+        content: ""; }
+      html body .content .inscription form md-checkbox.md-checked .md-icon {
+        background: blue; }
+      html body .content .inscription form md-input-container input {
+        border-color: grey; }
+      html body .content .inscription form md-input-container label {
+        color: white !important;
+        font-family: "Roboto", sans-serif !important; }
+      html body .content .inscription form .hyperlink {
+        color: #03b0f5;
+        text-decoration: underline; }
+      html body .content .inscription form .connexion {
+        width: 100px;
+        height: 50px;
+        padding: 5px 10px;
+        border-radius: 30px;
+        background-color: #0a7584; }
+      html body .content .inscription form .inscription {
+        width: 100px;
+        height: 50px;
+        padding: 5px 10px;
+        border-radius: 30px;
+        margin: 10px 20px;
+        background-color: #0a7584; }
+    html body .content .streams-search span {
+      color: black; }
+    html body .content .streams-search .search-col {
+      border-right: solid black 1px; }
+    html body .content .streams-search md-select {
+      margin-top: 10px; }
+
+/*# sourceMappingURL=style.css.map */

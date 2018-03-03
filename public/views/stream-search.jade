@@ -1,0 +1,36 @@
+.container.streams-search(ng-controller='StreamSearchController')
+    h3.mt-5 Echo - Faire une recherche de flux
+    form(role='form')
+        .row.mt-5
+            .col-6.search-col
+                label Rechercher par zone géographique
+                md-select(placeholder='Choisissez une zone', ng-model='area')
+                    md-option(ng-repeat='area in areas', ng-value='area.name') {{ area.name }}
+                label Rechercher par thème
+                md-select(placeholder='Choisissez un thème', ng-model='theme')
+                    md-option(ng-repeat='theme in themes', ng-value='theme.name') {{ theme.name }}
+                label Rechercher par thème
+                md-select(placeholder='Choisissez une école', ng-model='school')
+                    md-option(ng-repeat='school in schools', ng-value='school.name') {{ school.name }}
+                md-input-container.md-block.mt-5(flex-gt-sm)
+                    label Rechercher par mot-clé
+                    input(ng-model='keyword')
+                md-radio-group(ng-model='mode')
+                    md-radio-button(ng-repeat='mode in modes', ng-value='mode.name', ng-class="{'md-primary': $index==1}") {{ mode.name }}
+            .col-5.offset-1
+                md-input-container.md-block.mb-5(flex-gt-sm)
+                    label Rechercher par pseudo
+                    input(ng-model='username')
+                    md-checkbox(ng-model='mode.exact') pseudo exact
+                label Options de recherche
+                .md-block
+                    md-select(ng-model='date')
+                        md-option(ng-repeat='date in dates', ng-value='date.name', ng-selected='$first') {{ date.name }}
+                label.mt-5 Ordre de tri
+                .md-block
+                    md-select(ng-model='sort')
+                        md-option(ng-repeat='sort in sorts', ng-value='sort.name', ng-selected='$first') {{ sort.name }}
+
+        .row
+            .col-12.text-center
+                md-button(type='submit') Rechercher
